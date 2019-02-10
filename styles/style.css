@@ -1,0 +1,246 @@
+body {
+	background-image: url("../img/felt.png");
+	font-family: 'Open Sans', sans-serif;
+}
+
+/* Layout */
+
+.container {
+    max-width: 800px;
+    margin-left: auto;
+	margin-right: auto;
+	padding: 20px;
+}
+
+@media screen and (max-width: 640px) {
+	.container {
+		width: 96%;
+		padding: 10px 10px 0px 0px;
+	}
+}
+
+/* Game Messages */
+
+#gameMessage,
+#aceMessage {
+	font-size: 18px;
+	font-weight: 600;
+	color: #fff;
+	text-align: center;
+	padding-bottom: 10px;
+}
+
+@media screen and (max-width: 640px) {
+	#gameMessage {
+		padding-top: 10px;
+	}
+}
+
+#dealerMessage {
+	font-size: 16px;
+	font-weight: bold;
+	margin: 20px 0px;
+	color: #fff;
+	margin-left: 50px;
+}
+
+#total,
+#dealerTotal {
+	font-weight: bold;
+}
+
+#totalText,
+#dealerTotalText {
+	color: #fff;
+	
+}
+
+/* UI Elements */
+
+button {
+	padding: 10px;
+	margin-right: 6px;
+	margin-left: 6px;
+	border-radius: 10px;
+	background-color: #2e6478;
+	border: 3px solid #fff;
+	font-weight: 600;
+	color: #fff;
+	width: 80px;
+	letter-spacing: 1px;
+}
+
+button:disabled {
+	color: #c0c0c0;
+	background-color: #1a4b5d;
+	border-color: #c0c0c0;
+}
+
+button:enabled:active {
+	background-color: #447d92;
+}
+
+#aceMessage button {
+	width: 40px;
+	border: 2px solid #fff;	
+}
+
+#aceMessage button,
+#gameMessage button {
+	width: 50px;
+	border: 2px solid #fff;	
+}
+
+#resetBetButton {
+	display: block;
+	margin-top: 10px;
+}
+
+.noClick {
+	pointer-events: none;
+}
+
+/* Cards */
+
+#dealerCardsDiv {
+	background-image: url("../img/blackjack-title.png");
+	background-repeat: no-repeat;
+	background-position: right top;
+}
+
+#drawnCardsDiv {
+	background-image: url("../img/second-felt-text.png");
+	background-repeat: no-repeat;
+	background-position: right top;
+}
+
+#drawnCardsDiv,
+#dealerCardsDiv {
+	min-height: 200px;
+}
+
+@media screen and (max-width: 640px) {
+	#drawnCardsDiv,
+	#dealerCardsDiv {
+		min-height: 170px;
+		/* background-size: contain; */
+	}
+	#drawnCardsDiv img,
+	#dealerCardsDiv img {
+		max-height: 160px;
+	}
+}
+
+@media screen and (max-height: 800px) {
+	#drawnCardsDiv,
+	#dealerCardsDiv {
+		min-height: 180px;
+		background-size: contain;
+	}
+	#drawnCardsDiv img,
+	#dealerCardsDiv img {
+		max-height: 170px;
+	}
+}
+
+@media screen and (max-height: 700px) {
+	#totalText,
+	#dealerTotalText {
+		padding: 2px 0px;
+		margin: 2px 0px;
+	}
+}
+
+/* Bets and Chips */
+
+#bet,
+#betText,
+#credits,
+#creditsText {
+	color: #fff;
+	font-size: 18px;
+}
+
+#bet,
+#credits {
+	font-weight: bold;
+}
+
+#resetBetButton {
+	margin: 0px 0px 0px 100px;
+	display: inline-block;
+}
+
+#betsDiv {
+	margin-top: 20px;
+	padding: 10px;
+	border: 5px solid #2e6478;
+	border-radius: 10px;
+}
+
+#chipsDiv {
+	text-align: center;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+#betsTexts {
+	display: inline-block;
+	margin: 0px 20px;	
+}
+
+.chipAnimation:active {
+	transform: translateY(-10px);
+}
+
+@media screen and (max-width: 640px) {
+	#betsTexts {
+		text-align: center;
+	}
+	#resetBetButton,
+	#betsTexts,
+	#chipsDiv {
+		display: block;
+	}
+	#resetBetButton {
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+/* Grid System */
+
+/*  SECTIONS  */
+.section {
+	clear: both;
+	padding: 0px;
+	margin: 0px;
+}
+
+/*  COLUMN SETUP  */
+.col {
+	display: block;
+	float:left;
+	margin: 1% 0 1% 1.6%;
+}
+.col:first-child { 
+	margin-left: 0;
+}
+
+/*  GROUPING  */
+.group:before,
+.group:after { content:""; display:table; }
+.group:after { clear:both;}
+.group { zoom:1; /* For IE 6/7 */ }
+
+/*  GRID OF TWELVE  */
+.span_6_of_12 {
+	width: 49.2%; 
+}
+
+/*  GO FULL WIDTH AT LESS THAN 640 PIXELS */
+@media only screen and (max-width: 640px) {
+	.span_6_of_12 {
+		width: 100%; 
+	}
+}

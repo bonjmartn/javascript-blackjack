@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="styles/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
+
+    <title>JavaScript Blackjack by Bonnie</title>
+  </head>
+  <body>
+
+    <div class="container">
+        <div id="dealerCardsDiv">
+          <img id="cardBack1" src="img/deck/red_back.png">
+          <img id="cardBack2" src="img/deck/red_back.png">
+        </div>
+        <p id="dealerTotalText">Dealer Total: <span id="dealerTotal"></span> <span id="dealerMessage"></span></p>        
+        <div id="drawnCardsDiv">
+            <img src="img/deck/red_back.png">
+            <img src="img/deck/red_back.png">
+        </div>
+        <p id="totalText">Your Total: <span id="total"></span></p>
+
+        <div class="section group">
+            <div class="col span_6_of_12">
+              <button id="drawButton">Draw</button>
+              <button id="hitButton">Hit</button>
+              <button id="standButton">Stand</button>
+            </div>
+          <div class="col span_6_of_12">
+            <div id="aceMessage"></div>            
+            <div id="gameMessage"></div>
+          </div>          
+        </div>
+
+        <div id="betsDiv">
+          <div id="chipsDiv">
+            <a id="chip10link" href="">
+            <img class="chipAnimation" src="img/chips/chip-10.png"></a>
+            <a id="chip25link" href="">
+            <img class="chipAnimation" src="img/chips/chip-25.png"></a>
+            <a id="chip50link" href="">
+            <img class="chipAnimation" src="img/chips/chip-50.png"></a>
+          </div>
+          <div id="betsTexts">
+            <p id="creditsText">Credits: <span id="credits"></span></p>
+          </div>
+          <div id="betsTexts">
+            <p id="betText">Bet: <span id="bet"></span></p>
+          </div>
+          <button id="resetBetButton">Reset</button>       
+          </div>       
+    </div>
+
+    <script src="scripts/deck.js"></script>
+    <script src="scripts/script.js"></script>
+
+  </body>
+</html>
